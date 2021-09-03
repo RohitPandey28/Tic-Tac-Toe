@@ -1,0 +1,79 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+}
+.container {
+  width: 100vw;
+  height: 25rem;
+  max-width: 40rem;
+  background-color:white;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr ;
+  grid-gap:0.5rem;
+  outline: none;
+}
+body.displayBtn .container {
+  cursor: no-drop;
+}
+body.displayBtn .container .item {
+  pointer-events: none;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  background-color:black;
+}
+.playerName {
+  font-size: 2.7rem;
+  margin-bottom: 3rem;
+  color: white;
+}
+.playerOne {
+  background-image: url('Ximage.jpg');
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: center;
+}
+.computer {
+  background-image: url('Oimage.jpg');
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: center;
+
+}
+.startAgain {
+  cursor: pointer;
+  padding: 20px 50px;
+  display: inline-block;
+  background-color: rgb(44, 43, 43);
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+body.displayBtn .startAgain {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+
+.item:hover{
+  cursor: pointer;
+}
